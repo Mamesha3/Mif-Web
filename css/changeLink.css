@@ -1,0 +1,110 @@
+.links_form {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    width: 250px;
+    background-color: black;
+    padding: .3rem 1rem;
+    text-align: center;
+    color: white;
+    border-radius: .3rem;
+}
+
+.links_form.displayPassChack {
+    display: block;
+}
+
+.links_form>label>span {
+    text-align: left;
+}
+
+.links_form>label>input {
+    padding: .4rem .5rem;
+    width: 210px;
+    outline: none;
+    border: 2px solid green;
+    border-radius: .4rem;
+    font-weight: 580;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, .3);
+}
+
+.links_form>label>input:focus {
+    outline: 2px solid greenyellow;
+}
+
+.links_form>button {
+    padding: .3rem 1rem;
+    width: 100px;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, .3);
+}
+
+.links_form>button:active {
+    transform: scale(.95);
+}
+
+/* change links */
+.form_links_to_add {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: 4rem;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    padding: .3rem .5rem;
+}
+
+.form_links_to_add.display {
+    display: block;
+}
+
+.form_links_to_add>h3 {
+    font-size: 1rem;
+    font-style: oblique;
+    color: green;
+    text-align: left;
+}
+
+.form_links_to_add>.inputs {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.form_links_to_add>.inputs>input {
+    padding: .5rem .6rem;
+    width: 100%;
+    border: none;
+    border-radius: .4rem;
+    outline: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+}
+
+.form_links_to_add>.inputs>input:focus {
+    outline: 2px dotted greenyellow;
+}
+
+.form_links_to_add>button {
+    width: 100px;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    background-color: greenyellow;
+    color: orange;
+    margin-bottom: .5rem;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+
+.form_links_to_add>button:hover {
+    color: white;
+    background-color: orange;
+}
