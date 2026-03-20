@@ -63,11 +63,24 @@
     display: block;
 }
 
-.form_links_to_add>h3 {
+.form_links_to_add>.link_header_change>h3 {
     font-size: 1rem;
     font-style: oblique;
     color: green;
     text-align: left;
+}
+
+.form_links_to_add>.link_header_change {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_links_to_add>.link_header_change>span {
+    color: red;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 15px;
 }
 
 .form_links_to_add>.inputs {

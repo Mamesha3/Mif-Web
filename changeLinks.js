@@ -17,6 +17,7 @@ const linkTwo = document.getElementById("second")
 const linkThird = document.getElementById("third")
 const linkFourth = document.getElementById("fourth")
 const submitLinks = document.getElementById("change")
+const displayOff = document.querySelector('.cancel')
 
 getFormPass.addEventListener("click", () => {
     passVerify.classList.toggle("displayPassChack")
@@ -25,13 +26,25 @@ getFormPass.addEventListener("click", () => {
 getFormBtn.addEventListener("click", () => {
     const passValue = input.value
 
-    if (!passValue === "MiftahMame33" || !passValue) return alert("Wrong Password.")
+    if (!passValue.includes("MiftahMame33") || !passValue) return alert("Wrong Password.")
     //  formChange.classList.add("displayLinks")
     // displayPassChack
     passVerify.classList.remove("displayPassChack")
     getLinkform.classList.add("display")
 
     input.value = ""
+
+    const savedLinks = JSON.parse(localStorage.getItem("popLinks"))
+    if (savedLinks) {
+        linkOne.value = savedLinks.input1
+        linkTwo.value = savedLinks.input2
+        linkThird.value = savedLinks.input3
+        linkFourth.value = savedLinks.input4
+    }
+})
+
+displayOff.addEventListener('click', () => {
+    getLinkform.classList.remove("display")
 })
 
 // submit links
@@ -41,7 +54,7 @@ submitLinks.addEventListener("click", () => {
     const input3 = linkThird.value
     const input4 = linkFourth.value
 
-    if (!input1 || !input2 || !input3 || !input4) return alert()
+    if (!input1 || !input2 || !input3 || !input4) return alert('You Shold Fill all Link form.')
 
 
     const linkse = {

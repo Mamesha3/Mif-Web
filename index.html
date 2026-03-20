@@ -70,12 +70,15 @@
             </div>
             <!-- real form to submit -->
             <div class="form_links_to_add">
-                <h3>Poppo Live Links</h3>
+                <div class="link_header_change">
+                    <h3>Poppo Live Links</h3>
+                    <span class="cancel">X</span>
+                </div>
                 <div class="inputs">
-                    <input type="text" name="first" id="first">
-                    <input type="text" name="second" id="second">
-                    <input type="text" name="third" id="third">
-                    <input type="text" name="fourth" id="fourth">
+                    <input type="text" name="first" placeholder="Link 1.." id="first">
+                    <input type="text" name="second" placeholder="Link 2.." id="second">
+                    <input type="text" name="third" placeholder="Link 3.." id="third">
+                    <input type="text" name="fourth" placeholder="Link 4.." id="fourth">
                 </div>
                 <button id="change">
                     Change
@@ -960,9 +963,9 @@
             });
 
             // Disable right-click and keyboard shortcuts
-            document.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
-            });
+            // document.addEventListener('contextmenu', function (e) {
+            //     e.preventDefault();
+            // });
 
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'F12' ||
